@@ -107,10 +107,25 @@ title: Le Wagon Middleman boilerplate
 <div class="container">
   <div id="map" style="width: 100%; height: 500px;"></div>
 
+  <script>
+      function initMap() {
+        var uluru = {lat: 51.521356, lng: -0.076686};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEUJue6-prLLh0wi-re_vMvEC3hMiln4U&callback=initMap">
+    </script>
+
   <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-   -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEUJue6-prLLh0wi-re_vMvEC3hMiln4U&callback=initMap"
-  type="text/javascript"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEUJue6-prLLh0wi-re_vMvEC3hMiln4U&callback=initMap" type="text/javascript"></script>
 
   <script type="text/javascript">
     var myLatlng = new google.maps.LatLng(51.521356,-0.076686);
@@ -123,11 +138,12 @@ title: Le Wagon Middleman boilerplate
           styles: [] // TODO: replace [] by array from https://snazzymaps.com/
         };
 
-        var map = new google.maps.Map(document.getElementById('map'), myOptions);
-        var marker = new google.maps.Marker({
-          position: myLatlng,
-          map: map,
-          title: "FUCK YEAH MAPS!"
-        });
-      </script>
-    </div>
+    var map = new google.maps.Map(document.getElementById('map'), myOptions);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: "FUCK YEAH MAPS!"
+    });
+  </script> -->
+
+</div>
