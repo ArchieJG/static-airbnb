@@ -1,0 +1,20 @@
+<div class="container text-center padded">
+  <div id="team-title-padding">
+    <h1>Our team</h1>
+  </div>
+
+  <ul class="list-inline">
+    <% %w(archie taka stephen).each do |member| %>
+      <li>
+        <img src="images/<%= member %>.jpg" class="img-circle" height="100">
+        <h2><%= member.capitalize %></h2>
+      </li>
+  <% end %>
+  </ul>
+
+  <h3 class="padded">
+    <a href="mailto:contact-the-lads@airbnb.com">
+      <i class="fa fa-envelope"></i> contact-the-lads@airbnb.com
+    </a>
+  </h3>
+</div>
